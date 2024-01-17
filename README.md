@@ -1,3 +1,5 @@
+<h2>Notes</h2>
+
 ```
 // Lam tron
 #include<cmath>
@@ -605,6 +607,23 @@ string tich2soLon(string a, string b)
 	return c;
 }
 
+// Số lớn chia số nhỏ
+// <num> là số cần chia, <numlen> là độ dài của số cần chia
+string divide (string a)
+{
+	if ((int)a.size() < <numlen> && changeToNum(a) < <num>)
+		return "0";
+	string ans = "";
+	int res = 0;
+	for (int i = 0; i < a.size(); i++) {
+		int tmp = res * 10 + (a[i] - '0');
+		ans += changeToString(tmp / <num>);
+		res = tmp % <num>;
+	}
+	while (ans[0] == '0') ans.erase(0, 1);
+	return ans;
+}
+
 // So sanh 2 chuoi
 int soSanh(string a, string b)
 {
@@ -931,4 +950,134 @@ void tamGiacPascal(int n)
 		cout<<endl;
 	}
 }
+
+// Tim day don dieu dai nhat
+int timMax(int A[], int a, int b)
+{
+	int max=A[a];
+	for(int i=a;i<b;i++)
+		if(A[i]>=max)
+			max=A[i];
+	return max;
+}
+
+void ganMang(int A[], int n, int L[])
+{
+	for(int i=0;i<=n+1;i++)
+	{
+		int max=timMax(L,i+1,n+1);
+			for(int j=i+1;j<=n+1;j++)
+			{
+				if(L[j]==max && A[j]>=A[i])
+				{
+					cout<<A[j]<<" ";
+					break;
+				}
+			}
+	}
+}
+
+void quyHoachDong(int A[], int n, int L[])
+{
+	for(int i=n+1;i>=0;i--)
+	{
+		L[i]=1;
+		for(int j=i+1;j<=n+1;j++)
+		{
+			if((i==0 || j==n+1 || A[i]<=A[j]) && L[i]<L[j]+1)
+				L[i]=L[j]+1;
+		}
+	}
+}
+
+void quyHoachDong(char A[], char B[], int nA, int nB, int L[][SIZE])
+{
+    for (int i = 0; i <= nB; i++)
+        L[i][0] = 0;
+    for (int i = 0; i <= nA; i++)
+        L[0][i] = 0;
+    for (int i = 0; i < nB; i++)
+    {
+        for (int j = 0; j < nA; j++)
+        {
+            if (A[j] == B[i])
+                L[i + 1][j + 1] = L[i][j] + 1;
+            else
+                L[i + 1][j + 1] = timMax(L[i][j + 1], L[i + 1][j]);
+        }
+    }
+}
+
+// Tim xau con chung dai nhat
+void xuLy(char A[], char B[], int nA, int nB, int L[][SIZE])
+{
+    char T[SIZE];
+    int nt = 0;
+    int i = nB;
+    int j = nA;
+    while (true)
+    {
+        if (A[j - 1] == B[i - 1])
+        {
+            T[nt] = A[j - 1];
+            i--;
+            j--;
+            nt++;
+        }
+        else
+        {
+            if (timMax(L[i - 1][j], L[i][j - 1]) == L[i - 1][j])
+                i--;
+            else
+                j--;
+        }
+        if (L[i][j] == 0)
+            break;
+    }
+    T[nt] = '\0';
+    strrev(T);
+    puts(T);
+}
+
+// &1 = chính nó, &0 = 0
+// |0 = chính nó, |1 = 1
+// ^: giống = 0, khác = 1
+// ~: 0 = 1, 1 = 0;
+
+// Dịch trái (n<<k = n*2^k) (đuôi thêm 0)
+// Dịch phải (n>>k = n/2^k) (đầu thêm bit trái cùng)
+
+int layBit(int n, int k)
+{
+    return (n >> k) & 0x1;
+}
+
+void batBit(int &n, int k)
+{
+    n = n | (0x1 << k);
+}
+
+void tatBit(int &n, int k)
+{
+    n = n & (~(0x1 << k));
+}
+
+int dichTraiXoayVong(int n, int k)
+{
+    int a = 0x1;
+    for (int i = 0; i < k; i++)
+        batBit(a, i);
+    return ((n >> 32 - k) & a) | (n << k);
+}
+
+int demBit1(int n, int dem, int he)
+{
+    for (int i = 0; i < he; i++)
+    {
+        if (layBit(n, i) == 1)
+            dem++;
+    }
+    return dem;
+}
+
 ```
