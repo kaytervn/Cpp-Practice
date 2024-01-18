@@ -1,4 +1,4 @@
-<h1>Notes</h1>
+<h1>Ghi chú</h1>
 
 <h2>Làm tròn</h2>
 
@@ -1289,19 +1289,21 @@ void quyHoachDong(char A[], char B[], int nA, int nB, int L[][SIZE])
 
 <h2>Khái niệm</h2>
 
-<h3>&1 = chính nó, &0 = 0</h3>
+<p>&1 = chính nó, &0 = 0</p>
 
-<h3>|0 = chính nó, |1 = 1</h3>
+<p>|0 = chính nó, |1 = 1</p>
 
-<h3>^: giống = 0, khác = 1</h3>
+<p>^: giống = 0, khác = 1</p>
 
-<h3>~: 0 = 1, 1 = 0;</h3>
+<p>~: 0 = 1, 1 = 0;</p>
 
 <h2>Ghi chú</h2>
 
-<h3>Dịch trái (n<<k = n*2^k) (đuôi thêm 0) </h3>
+<p>Dịch trái (n&lt;&lt;k = n*2^k) (đuôi thêm 0)</p>
 
-<h3>Dịch phải (n>>k = n/2^k) (đầu thêm bit trái cùng)</h3>
+<p>Dịch phải (n>>k = n/2^k) (đầu thêm bit trái cùng)</p>
+
+<h2>Lấy bit</h2>
 
 ```
 int layBit(int n, int k)
@@ -1310,6 +1312,8 @@ int layBit(int n, int k)
 }
 ```
 
+<h2>Bật bit</h2>
+
 ```
 void batBit(int &n, int k)
 {
@@ -1317,12 +1321,16 @@ void batBit(int &n, int k)
 }
 ```
 
+<h2>Tắt bit</h2>
+
 ```
 void tatBit(int &n, int k)
 {
     n = n & (~(0x1 << k));
 }
 ```
+
+<h2>Dịch trái xoay vòng</h2>
 
 ```
 int dichTraiXoayVong(int n, int k)
@@ -1333,6 +1341,8 @@ int dichTraiXoayVong(int n, int k)
     return ((n >> 32 - k) & a) | (n << k);
 }
 ```
+
+<h2>Đếm bit 1</h2>
 
 ```
 int demBit1(int n, int dem, int he)
