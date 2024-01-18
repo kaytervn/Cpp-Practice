@@ -21,7 +21,7 @@ int lamTron(double a)
 }
 ```
 
-<h2>Thao tác chuỗi</h2>
+<h1>Thao tác chuỗi</h1>
 
 
 <h2>Nối chuỗi</h2>
@@ -36,14 +36,14 @@ c=a+b;
 s.insert(position, string);
 ```
 
-// So sanh
+<h2>So sánh</h2>
 
 ```
 s1.compare(s2);
 ```
 
 
-// Hoan doi chuoi
+<h2>Hoán đổi chuỗi</h2>
 
 
 ```
@@ -51,38 +51,38 @@ s1.swap(s2);
 ```
 
 
-// Tim vi tri chuoi con
+<h2>Tìm vị trí chuỗi con</h2>
 
 
 ```
 s1.find(s1);
 ```
 
-// Thay the tai vi tri chi dinh
+<h2>Thay thế tại vị trí chỉ định</h2>
 
 ```
 s.replace(position, amount, string);
 ```
 
-// Xoa cac ky tu trong pham vi chi dinh
+<h2>Xóa các ký tự trong phạm vi chỉ định</h2>
 
 ```
 a.erase(position, amount);
 ```
 
-// Tach chuoi
+<h2>Tách chuỗi</h2>
 
 ```
 b=substr.a(position, amount);
 ```
 
-// Tach tung tu trong chuoi (phan biet boi dau cach)
+<h2>Tách từng từ trong chuỗi (phân biệt bởi dấu cách)</h2>
 
 ```
 stringstream ss(a);
 ```
 
-// "tu do hanh phuc" -> "ut od hnah cuhp"
+<h2>"tu do hanh phuc" -> "ut od hnah cuhp"</h2>
 
 ```
 void daoChuoi()
@@ -105,7 +105,7 @@ void daoChuoi()
 ```
 
 
-// Chuyen chuoi ky tu thanh so
+<h2>Chuyển chuỗi ký tự thành số</h2>
 
 ```
 int changeToNum(string s)
@@ -118,7 +118,7 @@ int changeToNum(string s)
 ```
 
 
-// Chuyen so thanh chuoi ky tu
+<h2>Chuyển số thành chuỗi ký tự</h2>
 
 ```
 string changeToString(int value)
@@ -137,10 +137,10 @@ string changeToString(int value)
 ```
 
 
-// Thao tac mang
+<h1>Thao tác mảng</h1>
 
 
-// Mang 2 chieu thanh mang 1 chieu
+<h2>Mảng 2 chiều thành mảng 1 chiều</h2>
 
 ```
 void mang2thanh1chieu(int A[][SIZE], int m, int n, int B[])
@@ -152,7 +152,7 @@ void mang2thanh1chieu(int A[][SIZE], int m, int n, int B[])
 }
 ```
 
-// Mang 1 chieu thanh mang 2 chieu
+<h2>Mảng 1 chiều thành mảng 2 chiều</h2>
 
 ```
 void mang1thanh2chieu(int A[][SIZE], int m, int n, int B[])
@@ -164,7 +164,7 @@ void mang1thanh2chieu(int A[][SIZE], int m, int n, int B[])
 }
 ```
 
-// Chen x vao k
+<h2>Chèn x vào k</h2>
 
 ```
 void chenXvaoK(int A[], int &n, int x, int k)
@@ -176,7 +176,7 @@ void chenXvaoK(int A[], int &n, int x, int k)
 }
 ```
 
-// Xoa vi tri k
+<h2>Xóa vị trí k</h2>
 
 ```
 void xoaViTriK(int A[], int &n, int k)
@@ -187,7 +187,7 @@ void xoaViTriK(int A[], int &n, int k)
 }
 ```
 
-// Ghep mang xen ke
+<h2>Ghép mảng xen kẽ</h2>
 
 ```
 void ghepMangXenKe(nt &nC, int C[])
@@ -207,7 +207,7 @@ void ghepMangXenKe(nt &nC, int C[])
 }
 ```
 
-// Tong so trong chuoi
+<h2>Tổng số trong chuỗi</h2>
 
 ```
 int tongSoTrongChuoi(char A[])
@@ -227,7 +227,7 @@ int tongSoTrongChuoi(char A[])
 }
 ```
 
-// Lat nguoc mang
+<h2>Lật ngược mảng</h2>
 
 ```
 void latNguoc(char A[], int x, int y)
@@ -243,7 +243,7 @@ void latNguoc(char A[], int x, int y)
 }
 ```
 
-// Doi he 2 sang he 10
+<h2>Đổi từ hệ 2 sang hệ 10</h2>
 
 ```
 int doiHe2SangHe10(char S[])
@@ -255,7 +255,7 @@ int doiHe2SangHe10(char S[])
 }
 ```
 
-// Doi tu he 10 sang he 2, 8, 16
+<h2>Đổi từ hệ 10 sang hệ 2, 8, 16</h2>
 
 ```
 void doiHe(int n, char S[], int he)
@@ -274,7 +274,7 @@ void doiHe(int n, char S[], int he)
 }
 ```
 
-// Ngay lien sau 1 ngay
+<h2>Ngày liền sau 1 ngày</h2>
 
 ```
 void ngayLienSau1ngay(int &d, int &m, int &y)
@@ -293,7 +293,7 @@ void ngayLienSau1ngay(int &d, int &m, int &y)
 }
 ```
 
-// Ngay thu bao nhieu trong nam
+<h2>Ngày thứ bao nhiêu trong năm</h2>
 
 ```
 int soNgayThuBaoNhieuTrongNam(int d, int m, int y)
@@ -305,7 +305,7 @@ int soNgayThuBaoNhieuTrongNam(int d, int m, int y)
 }
 ```
 
-// Tinh ngay trong NAM
+<h2>Tính số ngày trong năm</h2>
 
 ```
 int soNgayTrongNam(int y)
@@ -317,7 +317,7 @@ int soNgayTrongNam(int y)
 }
 ```
 
-// Ngay - thang - nam Hop le
+<h2>Ngày - Tháng - Năm HỢP LỆ</h2>
 
 ```
 bool hopLe(int d, int m, int y)
@@ -326,7 +326,7 @@ bool hopLe(int d, int m, int y)
 }
 ```
 
-// Kiem tra NAM NHUAN
+<h2>Kiểm tra NĂM NHUẬN</h2>
 
 ```
 bool ktNamNhuan(int y)
@@ -335,7 +335,7 @@ bool ktNamNhuan(int y)
 }
 ```
 
-// Tinh NGAY trong thang
+<h2>Tính số ngày trong tháng</h2>
 
 ```
 int tinhNgayTrongThang(int m, int y)
@@ -355,7 +355,7 @@ int tinhNgayTrongThang(int m, int y)
 }
 ```
 
-// Tim x (linh canh)
+<h2>Tìm x (lính canh)</h2>
 
 ```
 int timX(int A[], int n, int x)
@@ -371,7 +371,7 @@ int timX(int A[], int n, int x)
 }
 ```
 
-// Tim x nhi phan (mang tang dan)
+<h2>Tìm x nhị phân (mảng tăng dần)</h2>
 
 ```
 int timXnhiPhan(int A[], int n, int x)
@@ -395,7 +395,7 @@ int timXnhiPhan(int A[], int n, int x)
 }
 ```
 
-// Tim x nhi phan (de quy)
+<h2>Tìm x nhị phân (đệ quy)</h2>
 
 ```
 int timX(int A[], int left, int right, int x)
@@ -415,7 +415,7 @@ int timX(int A[], int left, int right, int x)
 }
 ```
 
-// To hop (de quy)
+<h2>Tổ hợp (đệ quy)</h2>
 
 ```
 int toHop(int k, int n)
@@ -429,7 +429,7 @@ int toHop(int k, int n)
 }
 ```
 
-// Tim UCLN cua 2 so
+<h2>Tìm UCLN của 2 số</h2>
 
 ```
 int UCLN(int a, int b)
@@ -447,7 +447,7 @@ int UCLN(int a, int b)
 }
 ```
 
-// Boi chung lon nhat cua 2 so
+<h2>Tìm BCNN của 2 số</h2>
 
 ```
 int BCNN(int a, int b)
@@ -456,7 +456,7 @@ int BCNN(int a, int b)
 }
 ```
 
-// Xuat ra SO DAO NGUOC cua n
+<h2>Xuất ra số ĐẢO NGƯỢC của n</h2>
 
 ```
 int reverse(int n)
@@ -471,7 +471,7 @@ int reverse(int n)
 }
 ```
 
-// Kiem tra n TANG DAN
+<h2>Kiểm tra n TĂNG DẦN</h2>
 
 ```
 int ktTangDan(int n)
@@ -491,7 +491,7 @@ int ktTangDan(int n)
 }
 ```
 
-// Kiem tra SO NGUYEN TO
+<h2>Kiểm tra SỐ NGUYÊN TỐ</h2>
 
 ```
 bool ktSNT(int n)
@@ -505,7 +505,7 @@ bool ktSNT(int n)
 }
 ```
 
-// Kiem tra SO HOAN HAO
+<h2>Kiểm tra SỐ HOÀN HẢO</h2>
 
 ```
 bool ktSHH(int n)
@@ -523,7 +523,7 @@ bool ktSHH(int n)
 }
 ```
 
-// Kiem tra SO CHINH PHUONG
+<h2>Kiểm tra SỐ CHÍNH PHƯƠNG</h2>
 
 ```
 bool ktSCP(int n)
@@ -539,7 +539,28 @@ bool ktSCP(int n)
 }
 ```
 
-// Phan tich THUA SO NGUYEN TO
+<h2>Kiểm tra SỐ AMSTRONG</h2>
+
+```
+bool laSoAmstrong(int n)
+{
+	int k=demChuSo(n);
+	int s=0;
+	int cpy=n;
+	while(n>0)
+	{
+		int tmp=n%10;
+		s+=tinhXmuP(tmp,k);
+		n/=10;
+	}
+	if(s==cpy)
+		return 1;
+	else
+		return 0;
+}
+```
+
+<h2>Phân tích thừa số nguyên tố</h2>
 
 ```
 int phanTichThuaSoNguyenTo(int n)
@@ -565,7 +586,7 @@ int phanTichThuaSoNguyenTo(int n)
 }
 ```
 
-// Day FIBONACCI
+<h2>Dãy Fibonacci</h2>
 
 ```
 int dayFibonacci(int n)
@@ -585,7 +606,7 @@ int dayFibonacci(int n)
 }
 ```
 
-// fibo (de quy)
+<h2>Fibonacci (đệ quy)</h2>
 
 ```
 int fibo(int n)
@@ -597,7 +618,7 @@ int fibo(int n)
 }
 ```
 
-// fibo so lon
+<h2>Fibonacii (số lớn)</h2>
 
 ```
 string fibo(int n)
@@ -621,7 +642,7 @@ string fibo(int n)
 }
 ```
 
-// Tim min (de quy)
+<h2>Tìm min (đệ quy)</h2>
 
 ```
 int min(int A[], int n)
@@ -638,7 +659,7 @@ int min(int A[], int n)
 }
 ```
 
-// Tong mang 1 chieu (de quy)
+<h2>Tổng mảng 1 chiều (đệ quy)</h2>
 
 ```
 int tong(int A[], int n)
@@ -650,7 +671,7 @@ int tong(int A[], int n)
 }
 ```
 
-// Giai thua (de quy)
+<h2>Giai thừa (đệ quy)</h2>
 
 ```
 int giaiThua(int n)
@@ -662,7 +683,7 @@ int giaiThua(int n)
 }
 ```
 
-// Tinh x mu p (de quy)
+<h2>Tính x mũ p (đệ quy)</h2>
 
 ```
 int tinhXmuP(int x, int p)
@@ -674,7 +695,7 @@ int tinhXmuP(int x, int p)
 }
 ```
 
-// Tong 2 so lon
+<h2>Tổng 2 số lớn</h2>
 
 ```
 string tong2soLon(string a, string b)
@@ -704,7 +725,7 @@ string tong2soLon(string a, string b)
 }
 ```
 
-// Hieu 2 so lon
+<h2>Hiệu 2 số lớn</h2>
 
 ```
 string hieu2soLon(string a, string b)
@@ -743,7 +764,7 @@ string hieu2soLon(string a, string b)
 }
 ```
 
-// Tich 2 so lon
+<h2>Tích 2 số lớn</h2>
 
 ```
 string tich2soLon(string a, string b)
@@ -779,10 +800,9 @@ string tich2soLon(string a, string b)
 }
 ```
 
-// Số lớn chia số nhỏ
+<h2>Số lớn chia số nhỏ</h2>
 
-
-// <num> là số cần chia, <numlen> là độ dài của số cần chia
+<h2><num> là số cần chia, <numlen> là độ dài của số cần chia</h2> 
 
 ```
 string divide (string a)
@@ -801,7 +821,7 @@ string divide (string a)
 }
 ```
 
-// So sanh 2 chuoi
+<h2>So sánh 2 chuỗi</h2>
 
 ```
 int soSanh(string a, string b)
@@ -824,7 +844,7 @@ int soSanh(string a, string b)
 }
 ```
 
-// Dem phan tu trung
+<h2>Đếm phần tử trùng</h2>
 
 ```
 void demTanSuatTungKyTu(char A[], int n)
@@ -854,7 +874,7 @@ void demTanSuatTungKyTu(char A[], int n)
 }
 ```
 
-// Liet ke nhi phan (de quy)
+<h2>Liệt kê nhị phân (đệ quy)</h2>
 
 ```
 void lietKeNhiPhan(int k)
@@ -872,7 +892,7 @@ void lietKeNhiPhan(int k)
 }
 ```
 
-// Sinh nhi phan
+<h2>Sinh nhị phân</h2>
 
 ```
 void sinhNhiPhan(int n)
@@ -895,7 +915,7 @@ void sinhNhiPhan(int n)
 }
 ```
 
-// Liet ke tap con (de quy)
+<h2>Liệt kê tập con (đệ quy)</h2>
 
 ```
 void lietKeTapCon(int k)
@@ -913,7 +933,7 @@ void lietKeTapCon(int k)
 }
 ```
 
-// Sinh tap con
+<h2>Sinh tập con</h2>
 
 ```
 void sinhTapCon()
@@ -946,7 +966,7 @@ void sinhTapCon()
 }
 ```
 
-// Liet ke hoan vi (de quy)
+<h2>Liệt kê hoán vị (đệ quy)</h2>
 
 ```
 void lietKeHoanVi(int k)
@@ -969,7 +989,7 @@ void lietKeHoanVi(int k)
 }
 ```
 
-// Sinh hoan vi
+<h2>Sinh hoán vị</h2>
 
 ```
 void sinhHoanVi(int A[], int n)
@@ -993,7 +1013,7 @@ void sinhHoanVi(int A[], int n)
 }
 ```
 
-// Nguoi di du lich - tinh chi phi toi uu
+<h2>Người đi du lịch - Tính chi phí tối ưu</h2>
 
 ```
 void tinhChiPhi()
@@ -1011,7 +1031,7 @@ void tinhChiPhi()
 }
 ```
 
-// Phan cong viec - thoi gian toi uu
+<h2>Phân công công việc - Thời gian tối ưu</h2>
 
 ```
 void tgTU()
@@ -1035,7 +1055,7 @@ void tgTU()
 }
 ```
 
-// dau ngoac "(,)"
+<h2>Độ sâu dấu ngoặc "(,)"</h2>
 
 ```
 int tinhDoSau()
@@ -1064,28 +1084,7 @@ int tinhDoSau()
 }
 ```
 
-// check so Amstrong
-
-```
-bool laSoAmstrong(int n)
-{
-	int k=demChuSo(n);
-	int s=0;
-	int cpy=n;
-	while(n>0)
-	{
-		int tmp=n%10;
-		s+=tinhXmuP(tmp,k);
-		n/=10;
-	}
-	if(s==cpy)
-		return 1;
-	else
-		return 0;
-}
-```
-
-// kiem tra vi tri yen ngua
+<h2>Kiểm tra vị trí yên ngựa</h2>
 
 ```
 bool ktYenNgua(int A[][SIZE], int m, int n, int x, int y)
@@ -1106,10 +1105,9 @@ bool ktYenNgua(int A[][SIZE], int m, int n, int x, int y)
 }
 ```
 
-// Tinh F(n). Voi F(0)=0, F(1)=1, F(2n)=F(n), F(2n+1) = F(n) + F(n+1)
+<h2>Tính F(n). Với F(0)=0, F(1)=1, F(2n)=F(n), F(2n+1) = F(n) + F(n+1)</h2>
 
-
-// De quy
+<h2>Đệ quy</h2>
 
 ```
 int tinhFn(int n)
@@ -1123,7 +1121,7 @@ int tinhFn(int n)
 }
 ```
 
-// Mang F(n)
+<h2>Mảng F(n)</h2>
 
 ```
 int tinhFn(int A[], int n)
@@ -1139,10 +1137,9 @@ int tinhFn(int A[], int n)
 }
 ```
 
-// Liet ke cac mang con tang dan
+<h2>Liệt kê mảng con tăng dần</h2>
 
-
-// 6 5 3 2 3 4 2 7 -> [2 3 4; 2 7]
+<h2>6 5 3 2 3 4 2 7 -> [2 3 4; 2 7]</h2>
 
 ```
 void lietKeMangConTangDan(int A[], int n)
@@ -1161,7 +1158,7 @@ void lietKeMangConTangDan(int A[], int n)
 }
 ```
 
-// Tam giac pascal (de quy)
+<h2>Tam giác Pascal (đệ quy)</h2>
 
 ```
 int pascal(int k, int n)
@@ -1185,7 +1182,7 @@ void tamGiacPascal(int n)
 }
 ```
 
-// Tim day don dieu dai nhat
+<h2>Tìm dãy đơn điệu dài nhất</h2>
 
 ```
 int timMax(int A[], int a, int b)
@@ -1198,6 +1195,41 @@ int timMax(int A[], int a, int b)
 }
 ```
 
+<h2>Tìm xâu con chung dài nhất</h2>
+
+```
+void xuLy(char A[], char B[], int nA, int nB, int L[][SIZE])
+{
+    char T[SIZE];
+    int nt = 0;
+    int i = nB;
+    int j = nA;
+    while (true)
+    {
+        if (A[j - 1] == B[i - 1])
+        {
+            T[nt] = A[j - 1];
+            i--;
+            j--;
+            nt++;
+        }
+        else
+        {
+            if (timMax(L[i - 1][j], L[i][j - 1]) == L[i - 1][j])
+                i--;
+            else
+                j--;
+        }
+        if (L[i][j] == 0)
+            break;
+    }
+    T[nt] = '\0';
+    strrev(T);
+    puts(T);
+}
+```
+
+<h2>Gán mảng</h2>
 ```
 void ganMang(int A[], int n, int L[])
 {
@@ -1215,6 +1247,8 @@ void ganMang(int A[], int n, int L[])
 	}
 }
 ```
+
+<h2>Quy hoạch động</h2>
 
 ```
 void quyHoachDong(int A[], int n, int L[])
@@ -1251,47 +1285,23 @@ void quyHoachDong(char A[], char B[], int nA, int nB, int L[][SIZE])
 }
 ```
 
-// Tim xau con chung dai nhat
+<h1>Thao tác BIT</h1>
 
-```
-void xuLy(char A[], char B[], int nA, int nB, int L[][SIZE])
-{
-    char T[SIZE];
-    int nt = 0;
-    int i = nB;
-    int j = nA;
-    while (true)
-    {
-        if (A[j - 1] == B[i - 1])
-        {
-            T[nt] = A[j - 1];
-            i--;
-            j--;
-            nt++;
-        }
-        else
-        {
-            if (timMax(L[i - 1][j], L[i][j - 1]) == L[i - 1][j])
-                i--;
-            else
-                j--;
-        }
-        if (L[i][j] == 0)
-            break;
-    }
-    T[nt] = '\0';
-    strrev(T);
-    puts(T);
-}
-```
+<h2>Khái niệm</h2>
 
-// &1 = chính nó, &0 = 0
-// |0 = chính nó, |1 = 1
-// ^: giống = 0, khác = 1
-// ~: 0 = 1, 1 = 0;
+<h3>&1 = chính nó, &0 = 0</h3>
 
-// Dịch trái (n<<k = n*2^k) (đuôi thêm 0)
-// Dịch phải (n>>k = n/2^k) (đầu thêm bit trái cùng)
+<h3>|0 = chính nó, |1 = 1</h3>
+
+<h3>^: giống = 0, khác = 1</h3>
+
+<h3>~: 0 = 1, 1 = 0;</h3>
+
+<h2>Ghi chú</h2>
+
+<h3>Dịch trái (n<<k = n*2^k) (đuôi thêm 0) </h3>
+
+<h3>Dịch phải (n>>k = n/2^k) (đầu thêm bit trái cùng)</h3>
 
 ```
 int layBit(int n, int k)
