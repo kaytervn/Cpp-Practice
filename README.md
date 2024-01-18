@@ -1230,6 +1230,7 @@ void xuLy(char A[], char B[], int nA, int nB, int L[][SIZE])
 ```
 
 <h2>Gán mảng</h2>
+
 ```
 void ganMang(int A[], int n, int L[])
 {
