@@ -802,7 +802,7 @@ string tich2soLon(string a, string b)
 
 <h2>Số lớn chia số nhỏ</h2>
 
-<h2><num> là số cần chia, <numlen> là độ dài của số cần chia</h2> 
+<h2> [num] là số cần chia, [numlen] là độ dài của số cần chia </h2> 
 
 ```
 string divide (string a)
