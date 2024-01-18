@@ -1,12 +1,16 @@
-<h2>Notes</h2>
+<h1>Notes</h1>
+
+<h2>Làm tròn</h2>
 
 ```
-// Lam tron
 #include<cmath>
 roundf(kq*100)/100; // Lam tron den STP thu 2
 roundf(kq*1000)/1000; // Lam tron den STP thu 3
+```
 
-// Lam tron 0.5
+<h2>Làm tròn 0.5</h2>
+
+```
 int lamTron(double a)
 {
 	int h;
@@ -15,27 +19,72 @@ int lamTron(double a)
 		else h=int(a);
 	return h;
 }
+```
 
-// Thao tac chuoi
-// Noi chuoi
+<h2>Thao tác chuỗi</h2>
+
+
+<h2>Nối chuỗi</h2>
+
+```
 c=a+b;
-// Noi chuoi (tai vi tri chi dinh)
+```
+
+<h2>Nối chuỗi (tại vị trí chỉ định)</h2>
+
+```
 s.insert(position, string);
+```
+
 // So sanh
+
+```
 s1.compare(s2);
+```
+
+
 // Hoan doi chuoi
+
+
+```
 s1.swap(s2);
+```
+
+
 // Tim vi tri chuoi con
+
+
+```
 s1.find(s1);
+```
+
 // Thay the tai vi tri chi dinh
+
+```
 s.replace(position, amount, string);
+```
+
 // Xoa cac ky tu trong pham vi chi dinh
+
+```
 a.erase(position, amount);
+```
+
 // Tach chuoi
+
+```
 b=substr.a(position, amount);
+```
+
 // Tach tung tu trong chuoi (phan biet boi dau cach)
+
+```
 stringstream ss(a);
+```
+
 // "tu do hanh phuc" -> "ut od hnah cuhp"
+
+```
 void daoChuoi()
 {
 	string a;
@@ -53,8 +102,12 @@ void daoChuoi()
 	while(ss >> tmp)
 		c+=tmp+" ";
 }
+```
+
 
 // Chuyen chuoi ky tu thanh so
+
+```
 int changeToNum(string s)
 {
 	int value = 0;
@@ -62,8 +115,12 @@ int changeToNum(string s)
 		value = value * 10 + (s[i] - '0');
 	return value;
 }
+```
+
 
 // Chuyen so thanh chuoi ky tu
+
+```
 string changeToString(int value)
 {
 	string result = "";
@@ -77,9 +134,15 @@ string changeToString(int value)
 	}
 	return result;
 }
+```
+
 
 // Thao tac mang
+
+
 // Mang 2 chieu thanh mang 1 chieu
+
+```
 void mang2thanh1chieu(int A[][SIZE], int m, int n, int B[])
 {
 	int nB=0;
@@ -87,8 +150,11 @@ void mang2thanh1chieu(int A[][SIZE], int m, int n, int B[])
 		for(int j=0;j<n;j++)
 			B[nB++]=A[i][j];
 }
+```
 
 // Mang 1 chieu thanh mang 2 chieu
+
+```
 void mang1thanh2chieu(int A[][SIZE], int m, int n, int B[])
 {
 	int nB=0;
@@ -96,8 +162,11 @@ void mang1thanh2chieu(int A[][SIZE], int m, int n, int B[])
 		for(int j=0;j<n;j++)
 			A[i][j]=B[nB++];
 }
+```
 
 // Chen x vao k
+
+```
 void chenXvaoK(int A[], int &n, int x, int k)
 {
 	for(int i=n-1;i>=k;i--)
@@ -105,16 +174,22 @@ void chenXvaoK(int A[], int &n, int x, int k)
 	A[k]=x;
 	n++;
 }
+```
 
 // Xoa vi tri k
+
+```
 void xoaViTriK(int A[], int &n, int k)
 {
 	for(int i=k;i<n-1;i++)
 		A[i]=A[i+1];
 	n--;
 }
+```
 
 // Ghep mang xen ke
+
+```
 void ghepMangXenKe(nt &nC, int C[])
 {
 	int iA=0;
@@ -130,8 +205,11 @@ void ghepMangXenKe(nt &nC, int C[])
 	while(iB<nB)
 		C[nC++]=B[iB++];
 }
+```
 
 // Tong so trong chuoi
+
+```
 int tongSoTrongChuoi(char A[])
 {
 	int n=strlen(A);
@@ -147,8 +225,11 @@ int tongSoTrongChuoi(char A[])
 		}
 	return s;	
 }
+```
 
 // Lat nguoc mang
+
+```
 void latNguoc(char A[], int x, int y)
 {
 	while(x<y)
@@ -160,8 +241,11 @@ void latNguoc(char A[], int x, int y)
 		y--;
 	}
 }
+```
 
 // Doi he 2 sang he 10
+
+```
 int doiHe2SangHe10(char S[])
 {
 	int s=0;
@@ -169,8 +253,11 @@ int doiHe2SangHe10(char S[])
 		s+=pow(2,i)*(S[i]-'0');
 	return s;
 }
+```
 
 // Doi tu he 10 sang he 2, 8, 16
+
+```
 void doiHe(int n, char S[], int he)
 {
 	char x[]={'0','1','2','3','4','5','6',
@@ -185,8 +272,11 @@ void doiHe(int n, char S[], int he)
 	S[i]='\0';
 	strrev(S);
 }
+```
 
 // Ngay lien sau 1 ngay
+
+```
 void ngayLienSau1ngay(int &d, int &m, int &y)
 {
 	d++;
@@ -201,8 +291,11 @@ void ngayLienSau1ngay(int &d, int &m, int &y)
 		}
 	}
 }
+```
 
 // Ngay thu bao nhieu trong nam
+
+```
 int soNgayThuBaoNhieuTrongNam(int d, int m, int y)
 {
 	int dem=d;
@@ -210,8 +303,11 @@ int soNgayThuBaoNhieuTrongNam(int d, int m, int y)
 		dem= dem + tinhNgayTrongThang(i,y);
 	return dem;
 }
+```
 
 // Tinh ngay trong NAM
+
+```
 int soNgayTrongNam(int y)
 {
 	if(ktNamNhuan(y)==1)
@@ -219,20 +315,29 @@ int soNgayTrongNam(int y)
 	else
 		return 365;
 }
+```
 
 // Ngay - thang - nam Hop le
+
+```
 bool hopLe(int d, int m, int y)
 {
 	return d>0 && d<=tinhNgayTrongThang(m,y) && m>0 && m<13 && y>0;
 }
+```
 
 // Kiem tra NAM NHUAN
+
+```
 bool ktNamNhuan(int y)
 { 
 	return( y>0 && (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) );
 }
+```
 
 // Tinh NGAY trong thang
+
+```
 int tinhNgayTrongThang(int m, int y)
 {
 	if(m==4||m==6||m==9||m==11)
@@ -248,8 +353,11 @@ int tinhNgayTrongThang(int m, int y)
 		else 
 			return 31;
 }
+```
 
 // Tim x (linh canh)
+
+```
 int timX(int A[], int n, int x)
 {
 	A[n]=x;
@@ -261,8 +369,11 @@ int timX(int A[], int n, int x)
 	else
 		return -1;
 }
+```
 
 // Tim x nhi phan (mang tang dan)
+
+```
 int timXnhiPhan(int A[], int n, int x)
 {
 	int r,l;
@@ -282,8 +393,11 @@ int timXnhiPhan(int A[], int n, int x)
 	}
 	return -1;
 }
+```
 
 // Tim x nhi phan (de quy)
+
+```
 int timX(int A[], int left, int right, int x)
 {
 	if(right>=left)
@@ -299,8 +413,11 @@ int timX(int A[], int left, int right, int x)
 	}
 	return -1;
 }
+```
 
 // To hop (de quy)
+
+```
 int toHop(int k, int n)
 {
 	if(k==0||k==n)
@@ -310,8 +427,11 @@ int toHop(int k, int n)
 	else
 		return toHop(k-1,n-1)+toHop(k,n-1);
 }
+```
 
 // Tim UCLN cua 2 so
+
+```
 int UCLN(int a, int b)
 {
 	a=abs(a);
@@ -325,14 +445,20 @@ int UCLN(int a, int b)
 	}
 	return a;
 }
+```
 
 // Boi chung lon nhat cua 2 so
+
+```
 int BCNN(int a, int b)
 {
 	return a*b/UCLN(a,b);
 }
+```
 
 // Xuat ra SO DAO NGUOC cua n
+
+```
 int reverse(int n)
 {
 	int rev=0;
@@ -343,8 +469,11 @@ int reverse(int n)
 	}
 	return rev;
 }
+```
 
 // Kiem tra n TANG DAN
+
+```
 int ktTangDan(int n)
 {
 	int cuoi=n%10;
@@ -360,8 +489,11 @@ int ktTangDan(int n)
 	}
 	return 1;
 }
+```
 
 // Kiem tra SO NGUYEN TO
+
+```
 bool ktSNT(int n)
 {
 	if(n<2)
@@ -371,8 +503,11 @@ bool ktSNT(int n)
 			return 0;
 	return 1;
 }
+```
 
 // Kiem tra SO HOAN HAO
+
+```
 bool ktSHH(int n)
 {
 	int s=0;
@@ -386,8 +521,11 @@ bool ktSHH(int n)
 	else
 		return 0;
 }
+```
 
 // Kiem tra SO CHINH PHUONG
+
+```
 bool ktSCP(int n)
 {
 	int i=0;
@@ -399,8 +537,11 @@ bool ktSCP(int n)
 	}
 	return 0;
 }
+```
 
 // Phan tich THUA SO NGUYEN TO
+
+```
 int phanTichThuaSoNguyenTo(int n)
 {
 	int dem;
@@ -422,8 +563,11 @@ int phanTichThuaSoNguyenTo(int n)
 		}
 	}
 }
+```
 
 // Day FIBONACCI
+
+```
 int dayFibonacci(int n)
 {
 	int f1=1;
@@ -439,8 +583,11 @@ int dayFibonacci(int n)
 		}
 	return fn;
 }
+```
 
 // fibo (de quy)
+
+```
 int fibo(int n)
 {
 	if (n==0 || n==1) 
@@ -448,8 +595,11 @@ int fibo(int n)
 	else
 		return fibo(n-2)+fibo(n-1);
 }
+```
 
 // fibo so lon
+
+```
 string fibo(int n)
 {
 	if(n==0)
@@ -469,8 +619,11 @@ string fibo(int n)
 	}
 	return c;
 }
+```
 
 // Tim min (de quy)
+
+```
 int min(int A[], int n)
 {
 	if(n==0)
@@ -483,8 +636,11 @@ int min(int A[], int n)
 		else
 			return min(A,n-1);
 }
+```
 
 // Tong mang 1 chieu (de quy)
+
+```
 int tong(int A[], int n)
 {
 	if(n==0)
@@ -492,8 +648,11 @@ int tong(int A[], int n)
 	else
 		return A[n-1]+tong(A,n-1);
 }
+```
 
 // Giai thua (de quy)
+
+```
 int giaiThua(int n)
 {
 	if(n==0)
@@ -501,8 +660,11 @@ int giaiThua(int n)
 	else
 		return n*giaiThua(n-1);
 }
+```
 
 // Tinh x mu p (de quy)
+
+```
 int tinhXmuP(int x, int p)
 {
 	if(p==1)
@@ -510,8 +672,11 @@ int tinhXmuP(int x, int p)
 	else
 		return x*tinhXmuP(x,p-1);
 }
+```
 
 // Tong 2 so lon
+
+```
 string tong2soLon(string a, string b)
 {
 	while(a.size()<b.size())
@@ -537,8 +702,11 @@ string tong2soLon(string a, string b)
 	reverse(s.begin(),s.end());
 	return s;
 }
+```
 
 // Hieu 2 so lon
+
+```
 string hieu2soLon(string a, string b)
 {
 	while(a.size()<b.size())
@@ -573,8 +741,11 @@ string hieu2soLon(string a, string b)
 	else
 		return c;
 }
+```
 
 // Tich 2 so lon
+
+```
 string tich2soLon(string a, string b)
 {
 	while(a.size()<b.size())
@@ -606,9 +777,14 @@ string tich2soLon(string a, string b)
 		c.erase(0,1);
 	return c;
 }
+```
 
 // Số lớn chia số nhỏ
+
+
 // <num> là số cần chia, <numlen> là độ dài của số cần chia
+
+```
 string divide (string a)
 {
 	if ((int)a.size() < <numlen> && changeToNum(a) < <num>)
@@ -623,8 +799,11 @@ string divide (string a)
 	while (ans[0] == '0') ans.erase(0, 1);
 	return ans;
 }
+```
 
 // So sanh 2 chuoi
+
+```
 int soSanh(string a, string b)
 {
 	if(a.size()>b.size())
@@ -643,8 +822,11 @@ int soSanh(string a, string b)
 					return 0;
 			}
 }
+```
 
 // Dem phan tu trung
+
+```
 void demTanSuatTungKyTu(char A[], int n)
 {
 	for(int i=0;i<n;i++)
@@ -670,8 +852,11 @@ void demTanSuatTungKyTu(char A[], int n)
 		}
 	}
 }
+```
 
 // Liet ke nhi phan (de quy)
+
+```
 void lietKeNhiPhan(int k)
 {
 	if(k==n)
@@ -685,8 +870,11 @@ void lietKeNhiPhan(int k)
 		}
 	}
 }
+```
 
 // Sinh nhi phan
+
+```
 void sinhNhiPhan(int n)
 {
 	int A[SIZE]={0};
@@ -705,8 +893,11 @@ void sinhNhiPhan(int n)
 	}
 	while(i>=0);
 }
+```
 
 // Liet ke tap con (de quy)
+
+```
 void lietKeTapCon(int k)
 {
 	if(k==n)
@@ -720,8 +911,11 @@ void lietKeTapCon(int k)
 		}
 	}	
 }
+```
 
 // Sinh tap con
+
+```
 void sinhTapCon()
 {
 	int A[SIZE]={0};
@@ -750,8 +944,11 @@ void sinhTapCon()
 	}
 	while(true);
 }
+```
 
 // Liet ke hoan vi (de quy)
+
+```
 void lietKeHoanVi(int k)
 {
 	if(k==n)
@@ -770,8 +967,11 @@ void lietKeHoanVi(int k)
 		}
 	}
 }
+```
 
 // Sinh hoan vi
+
+```
 void sinhHoanVi(int A[], int n)
 {
 	xuat(A,n);
@@ -791,8 +991,11 @@ void sinhHoanVi(int A[], int n)
 	}
 	while(true);
 }
+```
 
 // Nguoi di du lich - tinh chi phi toi uu
+
+```
 void tinhChiPhi()
 {
 	int chiPhi=0;
@@ -806,8 +1009,11 @@ void tinhChiPhi()
 			H[i]=A[i];
 	}
 }
+```
 
 // Phan cong viec - thoi gian toi uu
+
+```
 void tgTU()
 {
 	int ta=0;
@@ -827,8 +1033,11 @@ void tgTU()
 			H[i]=P[i];
 	}
 }
+```
 
 // dau ngoac "(,)"
+
+```
 int tinhDoSau()
 {
 	int mongoac=0;
@@ -853,8 +1062,11 @@ int tinhDoSau()
 	else
 		return -1;
 }
+```
 
 // check so Amstrong
+
+```
 bool laSoAmstrong(int n)
 {
 	int k=demChuSo(n);
@@ -871,8 +1083,11 @@ bool laSoAmstrong(int n)
 	else
 		return 0;
 }
+```
 
 // kiem tra vi tri yen ngua
+
+```
 bool ktYenNgua(int A[][SIZE], int m, int n, int x, int y)
 {
 	int tam=A[x][y];
@@ -889,9 +1104,14 @@ bool ktYenNgua(int A[][SIZE], int m, int n, int x, int y)
 	
 	return 1;
 }
+```
 
 // Tinh F(n). Voi F(0)=0, F(1)=1, F(2n)=F(n), F(2n+1) = F(n) + F(n+1)
+
+
 // De quy
+
+```
 int tinhFn(int n)
 {
 	if(n==0||n==1)
@@ -901,8 +1121,11 @@ int tinhFn(int n)
 	else
 		return tinhFn((n-1)/2) + tinhFn((n+1)/2);
 }
+```
 
 // Mang F(n)
+
+```
 int tinhFn(int A[], int n)
 {
 	A[0]="0";
@@ -914,9 +1137,14 @@ int tinhFn(int A[], int n)
 	}
 	return A[n];
 }
+```
 
 // Liet ke cac mang con tang dan
+
+
 // 6 5 3 2 3 4 2 7 -> [2 3 4; 2 7]
+
+```
 void lietKeMangConTangDan(int A[], int n)
 {
 	int B[SIZE],nb=0;
@@ -931,8 +1159,11 @@ void lietKeMangConTangDan(int A[], int n)
 		}
 	}
 }
+```
 
 // Tam giac pascal (de quy)
+
+```
 int pascal(int k, int n)
 {
 	if(k==0||k==n)
@@ -940,7 +1171,9 @@ int pascal(int k, int n)
 	else
 		return pascal(k-1,n-1) + pascal(k,n-1);
 }
+```
 
+```
 void tamGiacPascal(int n)
 {
 	for(int i=0;i<=n;i++)
@@ -950,8 +1183,11 @@ void tamGiacPascal(int n)
 		cout<<endl;
 	}
 }
+```
 
 // Tim day don dieu dai nhat
+
+```
 int timMax(int A[], int a, int b)
 {
 	int max=A[a];
@@ -960,7 +1196,9 @@ int timMax(int A[], int a, int b)
 			max=A[i];
 	return max;
 }
+```
 
+```
 void ganMang(int A[], int n, int L[])
 {
 	for(int i=0;i<=n+1;i++)
@@ -976,7 +1214,9 @@ void ganMang(int A[], int n, int L[])
 			}
 	}
 }
+```
 
+```
 void quyHoachDong(int A[], int n, int L[])
 {
 	for(int i=n+1;i>=0;i--)
@@ -989,7 +1229,9 @@ void quyHoachDong(int A[], int n, int L[])
 		}
 	}
 }
+```
 
+```
 void quyHoachDong(char A[], char B[], int nA, int nB, int L[][SIZE])
 {
     for (int i = 0; i <= nB; i++)
@@ -1007,8 +1249,11 @@ void quyHoachDong(char A[], char B[], int nA, int nB, int L[][SIZE])
         }
     }
 }
+```
 
 // Tim xau con chung dai nhat
+
+```
 void xuLy(char A[], char B[], int nA, int nB, int L[][SIZE])
 {
     char T[SIZE];
@@ -1038,6 +1283,7 @@ void xuLy(char A[], char B[], int nA, int nB, int L[][SIZE])
     strrev(T);
     puts(T);
 }
+```
 
 // &1 = chính nó, &0 = 0
 // |0 = chính nó, |1 = 1
@@ -1047,21 +1293,28 @@ void xuLy(char A[], char B[], int nA, int nB, int L[][SIZE])
 // Dịch trái (n<<k = n*2^k) (đuôi thêm 0)
 // Dịch phải (n>>k = n/2^k) (đầu thêm bit trái cùng)
 
+```
 int layBit(int n, int k)
 {
     return (n >> k) & 0x1;
 }
+```
 
+```
 void batBit(int &n, int k)
 {
     n = n | (0x1 << k);
 }
+```
 
+```
 void tatBit(int &n, int k)
 {
     n = n & (~(0x1 << k));
 }
+```
 
+```
 int dichTraiXoayVong(int n, int k)
 {
     int a = 0x1;
@@ -1069,7 +1322,9 @@ int dichTraiXoayVong(int n, int k)
         batBit(a, i);
     return ((n >> 32 - k) & a) | (n << k);
 }
+```
 
+```
 int demBit1(int n, int dem, int he)
 {
     for (int i = 0; i < he; i++)
@@ -1079,5 +1334,4 @@ int demBit1(int n, int dem, int he)
     }
     return dem;
 }
-
 ```
