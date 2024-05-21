@@ -1,6 +1,6 @@
 <h1 align="center">C++ Practice</h1>
 
-This repository is used to store C++ source code programmed in the DevCpp environment for my coursework related to algorithms from subjects such as **Introduction to Programming**, **Programming Techniques**, **Data Structures and Algorithms**, and **Discrete Mathematics and Graph Theory**.
+This repository is used to store C++ source code programmed in the DevCpp environment for my coursework related to algorithms from university subjects.
 
 | Subject                               |                               Directory                               |
 | ------------------------------------- | :-------------------------------------------------------------------: |
