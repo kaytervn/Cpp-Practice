@@ -1,3 +1,14 @@
+<h1 align="center">C++ Practice</h1>
+
+This repository is used to store C++ source code programmed in the DevCpp environment for my coursework related to algorithms from subjects such as **Introduction to Programming**, **Programming Techniques**, **Data Structures and Algorithms**, and **Discrete Mathematics and Graph Theory**.
+
+| Subject                               |                               Directory                               |
+| ------------------------------------- | :-------------------------------------------------------------------: |
+| Introduction to Programming           | [DIR](https://github.com/kaytervn/Cpp-Practice/tree/main/NMLT-Baitap) |
+| Programming Techniques                | [DIR](https://github.com/kaytervn/Cpp-Practice/tree/main/KTLT-Baitap) |
+| Data Structures and Algorithms        |   [DIR](https://github.com/kaytervn/Cpp-Practice/tree/main/CTDLGT)    |
+| Discrete Mathematics and Graph Theory |  [DIR](https://github.com/kaytervn/Cpp-Practice/tree/main/TRR-LTDT)   |
+
 <h1>Ghi chú</h1>
 
 <h2>Làm tròn</h2>
@@ -23,7 +34,6 @@ int lamTron(double a)
 
 <h1>Thao tác chuỗi</h1>
 
-
 <h2>Nối chuỗi</h2>
 
 ```c
@@ -42,17 +52,13 @@ s.insert(position, string);
 s1.compare(s2);
 ```
 
-
 <h2>Hoán đổi chuỗi</h2>
-
 
 ```c
 s1.swap(s2);
 ```
 
-
 <h2>Tìm vị trí chuỗi con</h2>
-
 
 ```c
 s1.find(s1);
@@ -96,14 +102,13 @@ void daoChuoi()
 		reverse(tmp.begin(),tmp.end());
 		cout<<tmp<<" ";
 	}
-	
+
 	// Luu chuoi
 	string c;
 	while(ss >> tmp)
 		c+=tmp+" ";
 }
 ```
-
 
 <h2>Chuyển chuỗi ký tự thành số</h2>
 
@@ -116,7 +121,6 @@ int changeToNum(string s)
 	return value;
 }
 ```
-
 
 <h2>Chuyển số thành chuỗi ký tự</h2>
 
@@ -136,9 +140,7 @@ string changeToString(int value)
 }
 ```
 
-
 <h1>Thao tác mảng</h1>
-
 
 <h2>Mảng 2 chiều thành mảng 1 chiều</h2>
 
@@ -223,7 +225,7 @@ int tongSoTrongChuoi(char A[])
 			s+=num;
 			num=0;
 		}
-	return s;	
+	return s;
 }
 ```
 
@@ -330,7 +332,7 @@ bool hopLe(int d, int m, int y)
 
 ```c
 bool ktNamNhuan(int y)
-{ 
+{
 	return( y>0 && (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) );
 }
 ```
@@ -342,15 +344,15 @@ int tinhNgayTrongThang(int m, int y)
 {
 	if(m==4||m==6||m==9||m==11)
 		return 30;
-	else 
+	else
 		if(m==2)
 		{
 			if(ktNamNhuan(y))
 				return 29;
-			else 
+			else
 				return 28;
 		}
-		else 
+		else
 			return 31;
 }
 ```
@@ -379,7 +381,7 @@ int timXnhiPhan(int A[], int n, int x)
 	int r,l;
 	r=n-1;
 	l=0;
-	
+
 	for(int i=l;i<r;i++)
 	{
 		int mid= (l+r-1)/2;
@@ -389,7 +391,7 @@ int timXnhiPhan(int A[], int n, int x)
 			if(A[mid]>x)
 				r=mid-1;
 			else
-				l=mid+1;	
+				l=mid+1;
 	}
 	return -1;
 }
@@ -465,7 +467,7 @@ int reverse(int n)
 	for(int r; n>0; n=n/10)
 	{
 		r = n%10;
-		rev = rev*10 +r;	
+		rev = rev*10 +r;
 	}
 	return rev;
 }
@@ -577,7 +579,7 @@ int phanTichThuaSoNguyenTo(int n)
 		if(dem!=0)
 		{
 			cout << i;
-			if(dem > 1) 
+			if(dem > 1)
 				cout <<"^"<< dem;
 			if(n > i)
 				cout <<" * ";
@@ -593,7 +595,7 @@ int dayFibonacci(int n)
 {
 	int f1=1;
 	int fn=1;
-	if (n==0 || n==1) 
+	if (n==0 || n==1)
 		return n;
 	else
 		for(int i=2; i<n; i++)
@@ -611,7 +613,7 @@ int dayFibonacci(int n)
 ```c
 int fibo(int n)
 {
-	if (n==0 || n==1) 
+	if (n==0 || n==1)
 		return 1;
 	else
 		return fibo(n-2)+fibo(n-1);
@@ -628,7 +630,7 @@ string fibo(int n)
 	else
 		if(n==1)
 			return "1";
-	
+
 	string a="0";
 	string b="1";
 	string c="";
@@ -706,18 +708,18 @@ string tong2soLon(string a, string b)
 		b="0"+b;
 	reverse(a.begin(),a.end());
 	reverse(b.begin(),b.end());
-	
+
 	int t=0;
 	int nho=0;
 	string s="";
-	
+
 	for(int i=0;i<a.size();i++)
 	{
 		t=(a[i]-'0') + (b[i]-'0') + nho;
 		s+= t%10 + '0';
 		nho= t/10;
 	}
-	
+
 	if(nho==1)
 		s+="1";
 	reverse(s.begin(),s.end());
@@ -736,11 +738,11 @@ string hieu2soLon(string a, string b)
 		b="0"+b;
 	reverse(a.begin(),a.end());
 	reverse(b.begin(),b.end());
-	
+
 	string c;
 	int t=0;
 	int nho=0;
-	
+
 	for(int i=0;i<a.size();i++)
 	{
 		t=(a[i]-'0') -(b[i]-'0') -nho;
@@ -755,7 +757,7 @@ string hieu2soLon(string a, string b)
 			nho=0;
 		}
 	}
-	
+
 	reverse(c.begin(),c.end());
 	if(c[0]=='0')
 		return "0";
@@ -775,11 +777,11 @@ string tich2soLon(string a, string b)
 		b="0"+b;
 	reverse(a.begin(),a.end());
 	reverse(b.begin(),b.end());
-	
+
 	string c;
 	for(int k=0;k<a.size()+b.size();k++)
 		c+="0";
-	
+
 	for(int iB=0;iB<b.size();iB++)
 	{
 		int nho=0;
@@ -802,7 +804,7 @@ string tich2soLon(string a, string b)
 
 <h2>Số lớn chia số nhỏ</h2>
 
-<h2> [num] là số cần chia, [numlen] là độ dài của số cần chia </h2> 
+<h2> [num] là số cần chia, [numlen] là độ dài của số cần chia </h2>
 
 ```c
 string divide (string a)
@@ -929,7 +931,7 @@ void lietKeTapCon(int k)
 			A[k]=i;
 			lietKeTapCon(k+1);
 		}
-	}	
+	}
 }
 ```
 
@@ -943,7 +945,7 @@ void sinhTapCon()
 	int i=0;
 	xuat(A,k);
 	k=1;
-	
+
 	do
 	{
 		xuat(A,k);
@@ -1090,17 +1092,17 @@ int tinhDoSau()
 bool ktYenNgua(int A[][SIZE], int m, int n, int x, int y)
 {
 	int tam=A[x][y];
-	
+
 	//max hang
 	for(int j=0;j<n;j++)
 		if(tam<A[x][j])
 			return 0;
-	
+
 	//min cot
 	for(int i=0;i<m;i++)
 		if(tam>A[i][y])
 			return 0;
-	
+
 	return 1;
 }
 ```
